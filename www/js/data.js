@@ -205,18 +205,24 @@ angular.module('fuelbit')
         time: 90,
         date: '8/27/2014'
       }],
+      averageMpg: function() {
+        return (this.averageMiles() / this.average()).toFixed(2);
+      },
       average: function() {
-        return this.total() / this.days.length;
+        return (this.total() / this.days.length).toFixed(2);
+      },
+      averageMiles: function() {
+        return (this.totalMiles() / this.days.length).toFixed(2);
       },
       total: function() {
         return _.reduce(this.days, function(sum, day) {
           return sum + day.gas;
-        }, 0);
+        }, 0).toFixed(2);
       },
       totalMiles: function() {
         return _.reduce(this.days, function(sum, day) {
           return sum + day.dist;
-        }, 0);
+        }, 0).toFixed(2);
       },
       daysOfWeek: function(dotw) {
         return _.filter(this.days, function(day) {

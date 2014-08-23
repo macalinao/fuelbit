@@ -8,9 +8,15 @@
       <h2>{{Data.totalMiles()}} miles in the past 30 days</h2>
       <div id="overviewGraph"></div>
       <div class="row">
-        <strong class="col">Average</strong>
+        <strong class="col">Average gal/day</strong>
         <span class="col">{{Data.average()}}</span>
-        <strong class="col">Total</strong>
+        <strong class="col">Total gal</strong>
+        <span class="col">{{Data.total()}}</span>
+      </div>
+      <div class="row">
+        <strong class="col">Average MPG</strong>
+        <span class="col">{{Data.averageMpg()}}</span>
+        <strong class="col">Expected total</strong>
         <span class="col">{{Data.total()}}</span>
       </div>
     </ion-content>

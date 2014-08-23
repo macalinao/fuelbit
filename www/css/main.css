@@ -15,17 +15,12 @@
 }
 
 #home {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 #gasUsage {
   width: 100%;
   height: 400px;
-}
-
-#budgetDial {
-  width: 100%;
-  height: 300px;
 }
 
 #reports {
