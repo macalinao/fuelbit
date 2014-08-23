@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "lodash": "~2.4.1",
-    "jquery": "~1.11"
+    "jquery": "~1.11",
+    "socket.io": "~1.0.6"
   }
 }
