@@ -3,6 +3,7 @@ angular.module('fuelbit')
     $scope.cfg = {};
     $scope.submit = function() {
       vehicle.cfg = $scope.cfg;
+      vehicle.data = $scope.cfg;
       $location.path('/');
     };
   });
