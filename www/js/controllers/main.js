@@ -6,6 +6,9 @@ angular.module('fuelbit')
       // return;
     }
     $scope.vehicle = vehicle.data.vehicle;
-
-    $('#gasUsage').kendoChart();
+    $scope.gasUsage = function() {
+      setTimeout(function() {
+        $('#gasUsage').kendoChart();
+      }, 0);
+    };
   });
