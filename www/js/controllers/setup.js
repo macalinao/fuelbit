@@ -3,7 +3,6 @@ angular.module('fuelbit')
     $scope.cfg = {};
     $scope.submit = function() {
       vehicle.cfg = $scope.cfg;
-      vehicle.data = $scope.cfg;
       $location.path('/setupdays');
     };
   })
@@ -19,6 +18,7 @@ angular.module('fuelbit')
     $scope.schedule = {};
     $scope.submit = function() {
       vehicle.cfg.schedule = $scope.schedule;
+      vehicle.initData();
       $location.path('/');
     };
   });

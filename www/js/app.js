@@ -14,6 +14,19 @@ angular.module('fuelbit', ['ionic'])
     }
   });
 })
-.factory('vehicle', function() {
-  return {};
-});
+  .factory('vehicle', function() {
+    return {
+      initData: function() {
+        this.data = {
+          vehicle: {
+            model: 'Model T',
+            year: '1920',
+            cityMpg: 15,
+            highwayMpg: 40,
+            recordedMiles: 900,
+            maintenanceNeeded: true
+          }
+        };
+      }
+    };
+  });
