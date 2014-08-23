@@ -18,6 +18,16 @@ angular.module('fuelbit')
     };
     $scope.onHomeTab();
 
+    $scope.compareDate = {};
+    $scope.setDate = function(d) {
+      var ret = _.find(Data.days, function(day) {
+        return day.date === $scope.compareDate[d];
+      });
+      if (ret) {
+        $scope.compareDays[d] = ret;
+      }
+    };
+
     $scope.compareDays = {};
     $scope.compareGraph = function() {
       $('#compareGraph').kendoChart({

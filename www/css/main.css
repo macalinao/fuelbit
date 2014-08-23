@@ -27,6 +27,11 @@
   font-size: 20px;
 }
 
+.bigish {
+  font-size: 20px !important;
+  margin-top: 13px;
+}
+
 .bighead {
   font-size: 30px !important;
   line-height: 30px !important;

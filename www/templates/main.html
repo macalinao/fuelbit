@@ -27,7 +27,13 @@
 
       <div class="item item-icon-right">
         <h2 class="dayhead centered">Day 1</h2>
-        <button class="button button-energized icon ion-calendar"></button>
+      </div>
+      <div ng-if="!compareDays.one">
+        <div class="row">
+          <strong class="col bigish">Date</strong>
+          <input class="col col-50" ng-model="compareDate.one" placeholder="8/13/2014" />
+          <button class="col button button-energized icon ion-calendar" ng-click="setDate('one')"></button>
+        </div>
       </div>
       <div ng-if="compareDays.one">
         <div class="row">
@@ -50,7 +56,13 @@
 
       <div class="item item-icon-right">
         <h2 class="dayhead centered">Day 2</h2>
-        <button class="button button-energized icon ion-calendar"></button>
+      </div>
+      <div ng-if="!compareDays.two">
+        <div class="row">
+          <strong class="col bigish">Date</strong>
+          <input class="col col-50" ng-model="compareDate.two" placeholder="8/13/2014" />
+          <button class="col button button-energized icon ion-calendar" ng-click="setDate('two')"></button>
+        </div>
       </div>
       <div ng-if="compareDays.two">
         <div class="row">
