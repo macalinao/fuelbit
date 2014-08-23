@@ -18,6 +18,12 @@ angular.module('fuelbit')
     };
     $scope.onHomeTab();
 
+    $scope.onCompareTab = function() {
+      setTimeout(function() {
+        
+      }, 0);
+    };
+
     $scope.data = {};
 
     $scope.gasUsage = function() {
