@@ -5,11 +5,13 @@
   <ion-tab title="My Vehicle" icon-on="ion-ios7-home" icon-off="ion-ios7-home-outline" on-select="onHomeTab()">
     <ion-content id="home" class="centered" has-header="true">
       <h1>{{vehicle.model}}</h1>
-      <h2>{{vehicle.recordedMiles}} miles on record</h2>
+      <h2>{{Data.totalMiles()}} miles in the past 30 days</h2>
       <div id="overviewGraph"></div>
       <div class="row">
         <strong class="col">Average</strong>
         <span class="col">{{Data.average()}}</span>
+        <strong class="col">Total</strong>
+        <span class="col">{{Data.total()}}</span>
       </div>
     </ion-content>
   </ion-tab>

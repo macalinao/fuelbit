@@ -36,9 +36,17 @@ angular.module('fuelbit')
         date: '8/24/2014'
       }],
       average: function() {
+        return this.total() / this.days.length;
+      },
+      total: function() {
         return _.reduce(this.days, function(sum, day) {
           return sum + day.gas;
-        }, 0) / this.days.length;
+        }, 0);
+      },
+      totalMiles: function() {
+        return _.reduce(this.days, function(sum, day) {
+          return sum + day.dist;
+        }, 0);
       }
     };
   });
