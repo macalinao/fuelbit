@@ -1,4 +1,4 @@
-angular.module('energypal')
+angular.module('fuelbit')
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('main', {

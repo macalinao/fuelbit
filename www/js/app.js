@@ -1,4 +1,4 @@
-angular.module('energypal', ['ionic'])
+angular.module('fuelbit', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -13,4 +13,7 @@ angular.module('energypal', ['ionic'])
       StatusBar.styleDefault();
     }
   });
+})
+.factory('vehicle', function() {
+  return {};
 });
