@@ -1,24 +1,20 @@
 angular.module('fuelbit')
-  .controller('MainCtrl', function($scope, $location, vehicle, $ionicPopup) {
-    if (!vehicle.data) {
-      vehicle.initData();
-      // $location.path('/setup');
-      // return;
-    }
-    $scope.vehicle = vehicle.data.vehicle;
+  .controller('MainCtrl', function($scope, $location, $ionicPopup, Data) {
+    $scope.vehicle = Data.vehicle;
 
     $scope.onHomeTab = function() {
       setTimeout(function() {
-        $('#budgetDial').kendoRadialGauge({
-          pointer: {
-            value: 50
-          },
-          scale: {
-            min: 0,
-            max: 100,
-            labels: {
-              format: 'C'
-            }
+        $('#overviewGraph').kendoChart({
+          title: 'Overview',
+          series: [{
+            data: _.map(Data.days, function(day) {
+              return day.gas;
+            })
+          }],
+          categoryAxis: {
+            categories: _.map(Data.days, function(day) {
+              return day.date;
+            })
           }
         });
       }, 0);
