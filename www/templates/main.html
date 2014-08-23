@@ -23,6 +23,54 @@
   </ion-tab>
   <ion-tab title="Compare" icon-on="ion-ios7-analytics" icon-off="ion-ios7-analytics-outline" on-select="onCompareTab()">
     <ion-content has-header="true">
+      <h1 class="title bighead centered">Compare Days</h1>
+
+      <div class="item item-icon-right">
+        <h2 class="dayhead centered">Day 1</h2>
+        <button class="button button-energized icon ion-calendar"></button>
+      </div>
+      <div ng-if="compareDays.one">
+        <div class="row">
+          <strong class="col col-50">Date</strong>
+          <span class="col col-50">{{compareDays.one.date}} gallons</span>
+        </div>
+        <div class="row">
+          <strong class="col col-50">Gallons</strong>
+          <span class="col col-50">{{compareDays.one.gas}} gallons</span>
+        </div>
+        <div class="row">
+          <strong class="col col-50">Distance Travelled</strong>
+          <span class="col col-50">{{compareDays.one.dist}} miles</span>
+        </div>
+        <div class="row">
+          <strong class="col col-50">Time Elapsed</strong>
+          <span class="col col-50">{{compareDays.one.time}} minutes</span>
+        </div>
+      </div>
+
+      <div class="item item-icon-right">
+        <h2 class="dayhead centered">Day 2</h2>
+        <button class="button button-energized icon ion-calendar"></button>
+      </div>
+      <div ng-if="compareDays.two">
+        <div class="row">
+          <strong class="col col-50">Date</strong>
+          <span class="col col-50">{{compareDays.one.date}} gallons</span>
+        </div>
+        <div class="row">
+          <strong class="col col-50">Gallons</strong>
+          <span class="col col-50">{{compareDays.two.gas}} gallons</span>
+        </div>
+        <div class="row">
+          <strong class="col col-50">Distance Travelled</strong>
+          <span class="col col-50">{{compareDays.two.dist}} miles</span>
+        </div>
+        <div class="row">
+          <strong class="col col-50">Time Elapsed</strong>
+          <span class="col col-50">{{compareDays.two.time}} minutes</span>
+        </div>
+      </div>
+      <div id="compareGraph"></div>
     </ion-content>
   </ion-tab>
 </ion-tabs>

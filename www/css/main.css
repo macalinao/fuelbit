@@ -26,3 +26,26 @@
 #reports {
   font-size: 20px;
 }
+
+.bighead {
+  font-size: 30px !important;
+  line-height: 30px !important;
+  padding-top: 7px;
+}
+
+.headicon {
+  margin-left: -80px !important;
+}
+
+.dayhead {
+  font-size: 25px !important;
+}
+
+#compareDiv {
+  margin-top: 100px;
+}
+
+#compareGraph {
+  height: 300px;
+  width: 100%;
+}

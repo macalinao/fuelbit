@@ -18,10 +18,11 @@ angular.module('fuelbit')
     };
     $scope.onHomeTab();
 
-    $scope.onCompareTab = function() {
-      setTimeout(function() {
-        
-      }, 0);
+    $scope.compareDays = {};
+    $scope.compareGraph = function() {
+      $('#compareGraph').kendoChart({
+        title: 'Comparison of days...'
+      });
     };
 
     $scope.data = {};
