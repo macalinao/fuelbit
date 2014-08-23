@@ -1,4 +1,4 @@
-angular.module('fuelbit', ['ionic'])
+angular.module('fuelbit', ['ionic', 'btford.socket-io'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -14,19 +14,6 @@ angular.module('fuelbit', ['ionic'])
     }
   });
 })
-  .factory('vehicle', function() {
-    return {
-      initData: function() {
-        this.data = {
-          vehicle: {
-            model: 'Model T',
-            year: '1920',
-            cityMpg: 15,
-            highwayMpg: 40,
-            recordedMiles: 900,
-            maintenanceNeeded: true
-          }
-        };
-      }
-    };
+  .factory('chatroom', function(socketFactory) {
+    return socketFactory();
   });
