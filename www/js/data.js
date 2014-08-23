@@ -25,7 +25,7 @@ angular.module('fuelbit')
         time: 20,
         date: '8/22/2014'
       }, {
-        gas: .75,
+        gas: 0.75,
         dist: 12,
         time: 32,
         date: '8/23/2014'
@@ -34,6 +34,11 @@ angular.module('fuelbit')
         dist: 27,
         time: 84,
         date: '8/24/2014'
-      }]
+      }],
+      average: function() {
+        return _.reduce(this.days, function(sum, day) {
+          return sum + day.gas;
+        }, 0) / this.days.length;
+      }
     };
   });

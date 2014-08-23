@@ -7,6 +7,10 @@
       <h1>{{vehicle.model}}</h1>
       <h2>{{vehicle.recordedMiles}} miles on record</h2>
       <div id="overviewGraph"></div>
+      <div class="row">
+        <strong class="col">Average</strong>
+        <span class="col">{{Data.average()}}</span>
+      </div>
     </ion-content>
   </ion-tab>
   <ion-tab title="Monthly Reports" icon-on="ion-ios7-pricetags" icon-off="ion-ios7-pricetags-outline">

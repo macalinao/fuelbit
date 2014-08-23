@@ -1,6 +1,8 @@
 angular.module('fuelbit')
-  .controller('MainCtrl', function($scope, $location, $ionicPopup, Data) {
+  .controller('MainCtrl', function($scope, $location, Data) {
     $scope.vehicle = Data.vehicle;
+
+    $scope.Data = Data;
 
     $scope.onHomeTab = function() {
       setTimeout(function() {
