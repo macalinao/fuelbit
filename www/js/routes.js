@@ -10,7 +10,11 @@ angular.module('fuelbit')
         url: '/setup',
         templateUrl: 'templates/setup.html',
         controller: 'SetupCtrl'
+      })
+      .state('setupdays', {
+        url: '/setupdays',
+        templateUrl: 'templates/setup.days.html',
+        controller: 'SetupDaysCtrl'
       });
-
     $urlRouterProvider.otherwise('/');
   });
