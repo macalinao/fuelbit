@@ -7,7 +7,11 @@ angular.module('fuelbit')
       $location.path('/setupdays');
     };
   })
-  .controller('SetupDaysCtrl', function($scope, vehicle) {
+  .controller('SetupDaysCtrl', function($scope, $location, vehicle) {
+    if (!vehicle.cfg) {
+      $location.path('/setup');
+      return;
+    }
     $scope.days = [
       'Monday',
       'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
@@ -15,5 +19,6 @@ angular.module('fuelbit')
     $scope.schedule = {};
     $scope.submit = function() {
       vehicle.cfg.schedule = $scope.schedule;
+      $location.path('/');
     };
   });
