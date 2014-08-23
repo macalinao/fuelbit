@@ -2,7 +2,7 @@ angular.module('fuelbit')
   .factory('Data', function() {
     return {
       vehicle: {
-        model: 'Model T',
+        model: 'Bugatti',
         year: '1920',
         cityMpg: 15,
         highwayMpg: 40,
