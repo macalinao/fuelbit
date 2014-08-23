@@ -7,7 +7,7 @@ angular.module('fuelbit')
     }
     $scope.vehicle = vehicle.data.vehicle;
 
-    $scope.home = function() {
+    $scope.onHomeTab = function() {
       setTimeout(function() {
         $('#budgetDial').kendoRadialGauge({
           pointer: {
@@ -23,7 +23,7 @@ angular.module('fuelbit')
         });
       }, 0);
     };
-    $scope.home();
+    $scope.onHomeTab();
 
     $scope.gasUsage = function() {
       setTimeout(function() {

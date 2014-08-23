@@ -2,7 +2,7 @@
   <h1 class="title"><img src="/img/logo.png" id="logo" /></h1>
 </ion-header-bar>
 <ion-tabs class="tabs-positive tabs-icon-top">
-  <ion-tab title="My Vehicle" icon-on="ion-ios7-home" icon-off="ion-ios7-home-outline">
+  <ion-tab title="My Vehicle" icon-on="ion-ios7-home" icon-off="ion-ios7-home-outline" on-select="onHomeTab()">
   <ion-content id="home" class="centered" has-header="true">
     <h1>{{vehicle.model}}</h1>
     <h2>{{vehicle.recordedMiles}} miles on record</h2>
@@ -15,7 +15,7 @@
       <div id="gasUsage"></div>
     </ion-content>
   </ion-tab>
-  <ion-tab title="Data" icon-on="ion-ios7-analytics" icon-off="ion-ios7-analytics-outline" on-select="gasUsage()">
+  <ion-tab title="Data" icon-on="ion-ios7-analytics" icon-off="ion-ios7-analytics-outline" on-select="onDataTab()">
     <ion-content has-header="true">
       <ion-list>
         <ion-item class="row padding">
