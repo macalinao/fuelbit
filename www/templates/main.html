@@ -3,6 +3,19 @@
 </ion-header-bar>
 <ion-tabs class="tabs-positive tabs-icon-top">
   <ion-tab title="My Vehicle" icon-on="ion-ios7-home" icon-off="ion-ios7-home-outline">
+  <ion-content id="home" class="centered" has-header="true">
+    <h1>{{vehicle.model}}</h1>
+    <h2>{{vehicle.recordedMiles}} miles on record</h2>
+    <div id="budgetDial"></div>
+    <p>Click the icon to set a budget for your gas usage.</p>
+  </ion-content> 
+  </ion-tab>
+  <ion-tab title="Budget" icon-on="ion-ios7-pricetags" icon-off="ion-ios7-pricetags-outline">
+    <ion-content has-header="true">
+      <div id="gasUsage"></div>
+    </ion-content>
+  </ion-tab>
+  <ion-tab title="Data" icon-on="ion-ios7-analytics" icon-off="ion-ios7-analytics-outline" on-select="gasUsage()">
     <ion-content has-header="true">
       <ion-list>
         <ion-item class="row padding">
@@ -29,13 +42,5 @@
         </ion-item>
       </ion-list>
     </ion-content>
-  </ion-tab>
-  <ion-tab title="Gas Usage" icon-on="ion-ios7-analytics" icon-off="ion-ios7-analytics-outline" on-select="gasUsage()">
-    <ion-content has-header="true">
-      <div id="gasUsage"></div>
-    </ion-content>
-  </ion-tab>
-  <ion-tab title="Money Usage" icon-on="ion-ios7-pricetags" icon-off="ion-ios7-pricetags-outline">
-
   </ion-tab>
 </ion-tabs>
