@@ -236,6 +236,17 @@ angular.module('fuelbit')
       },
       avgDay: function(dotw) {
         return this.totalDay(dotw) / this.daysOfWeek(dotw).length;
+      },
+      nextFuelDay: function() {
+        var fuelLvlInput = 0.75; // 75% full
+        var fuelUsed = 14; // gal
+        var avgGalDay = this.average();
+
+        var fullTank = fuelUsed / (1 - fuelLvlInput);
+        var x = fullTank / avgGalDay;
+        var usedFuelLvl = fuelLvlInput * fullTank;
+        var daysLeft = x - (usedFuelLvl / avgGalDay);
+        return Math.floor(daysLeft);
       }
     };
   });
