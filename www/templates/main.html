@@ -3,16 +3,32 @@
 </ion-header-bar>
 <ion-tabs class="tabs-positive tabs-icon-top">
   <ion-tab title="My Vehicle" icon-on="ion-ios7-home" icon-off="ion-ios7-home-outline" on-select="onHomeTab()">
-  <ion-content id="home" class="centered" has-header="true">
-    <h1>{{vehicle.model}}</h1>
-    <h2>{{vehicle.recordedMiles}} miles on record</h2>
-    <div id="budgetDial" ng-click="budgetPopup()"></div>
-    <p>Click the dial to set a budget for your gas usage.</p>
-  </ion-content> 
+    <ion-content id="home" class="centered" has-header="true">
+      <h1>{{vehicle.model}}</h1>
+      <h2>{{vehicle.recordedMiles}} miles on record</h2>
+      <div id="budgetDial" ng-click="budgetPopup()"></div>
+      <p>Click the dial to set a budget for your gas usage.</p>
+    </ion-content>
   </ion-tab>
   <ion-tab title="Monthly Reports" icon-on="ion-ios7-pricetags" icon-off="ion-ios7-pricetags-outline">
     <ion-content has-header="true">
-      <div id="gasUsage"></div>
+      <div id="reports">
+        <div class="row">
+          <div class="col col-50"></div>
+          <div class="col">Average</div>
+          <div class="col">Current</div>
+        </div>
+        <div class="row">
+          <div class="col col-50">Total Gallons Used</div>
+          <div class="col bigtext">236</div>
+          <div class="col bigtext">286 (+50)</div>
+        </div>
+        <div class="row">
+          <div class="col col-50">Total $$ Spent</div>
+          <div class="col bigtext">236</div>
+          <div class="col bigtext">286 (+50)</div>
+        </div>
+      </div>
     </ion-content>
   </ion-tab>
   <ion-tab title="Data" icon-on="ion-ios7-analytics" icon-off="ion-ios7-analytics-outline" on-select="onDataTab()">
