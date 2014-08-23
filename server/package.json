@@ -1,0 +1,6 @@
+{
+  "name": "linkin-server",
+  "description": "The server for the LinkIn app.",
+  "version": "0.1.0",
+  "author": "Ian Macalinao <me@ian.pw>"
+}
