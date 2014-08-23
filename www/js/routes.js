@@ -1,20 +1,10 @@
-angular.module('fuelbit')
+angular.module('link')
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('main', {
+      .state('start', {
         url: '/',
-        templateUrl: 'templates/main.html',
-        controller: 'MainCtrl'
-      })
-      .state('setup', {
-        url: '/setup',
-        templateUrl: 'templates/setup.html',
-        controller: 'SetupCtrl'
-      })
-      .state('setupdays', {
-        url: '/setupdays',
-        templateUrl: 'templates/setup.days.html',
-        controller: 'SetupDaysCtrl'
+        templateUrl: 'templates/start.html',
+        controller: 'StartCtrl'
       });
     $urlRouterProvider.otherwise('/');
   });

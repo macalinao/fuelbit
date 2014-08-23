@@ -1,4 +1,4 @@
-angular.module('fuelbit', ['ionic', 'btford.socket-io'])
+angular.module('link', ['ionic', 'btford.socket-io'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
